@@ -1,0 +1,9 @@
+partial alphanumeric_keys
+
+xkb_symbols "usde" {
+
+   include "us"
+
+   key <RALT> { [ Escape ] };
+   key <LSGT> { [ Shift_L ] }; 
+};
