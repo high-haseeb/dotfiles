@@ -1,0 +1,71 @@
+@define-color black #131313;
+@define-color gray  #2F3130;
+@define-color active #C7C7C7;
+@define-color white #EFEFEF;
+@define-color yellow #FFDD33;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font;
+    min-height: 0;
+}
+window#waybar {
+    background: #181818;
+    color: @white;
+    font-size: 12pt;
+}
+#workspaces {
+    background: @gray;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#workspaces button {
+    padding: 0px 5px;
+    background: transparent;
+    border-radius: 0px;
+    color: white;
+}
+#workspaces button.focused {
+    border-radius: 8px;
+    background: @active;
+    color: @gray;
+}
+#window {
+    padding: 0px 10px;
+    margin: 0px 10px;
+    color: @white;
+    border-radius: 6px;
+}
+#custom-playerctl {
+  	padding: 0px 10px;
+    background-color: #181818;
+    color: @white;
+    border-radius: 4px;
+}
+#pulseaudio, #network, #memory, #cpu, #temperature, #battery, #tray, #clock.date, #clock.time {
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#battery {
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 10px;
+    background-color: @active;
+    color: @gray;
+}
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
